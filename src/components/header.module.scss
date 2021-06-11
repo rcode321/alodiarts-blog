@@ -8,6 +8,12 @@
   text-decoration: none;
 }
 
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+
 .link {
   color: #d41010b0;
 }
