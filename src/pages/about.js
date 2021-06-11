@@ -1,16 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const About = () => {
+import Footer from "../components/footer"
+
+const AboutPage = () => {
   return (
     <div>
-      <h1>About Page</h1>
-      <p>currently working on my Youtube Channel</p>
+      <h1>About Me</h1>
+      <p>I currently working on my Youtube channel.</p>
       <p>
-        <Link to="/contact">Link to about page</Link>
+        <Link to="/contact">Want to work with me? Reach out.</Link>
       </p>
+      <Footer />
     </div>
   )
 }
 
-export default About
+export default AboutPage
