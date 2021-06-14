@@ -5,6 +5,8 @@
 
 This is a React posts.
 
+![Stone](./code.jpg)
+
 ## Topics Covered
 
 1. Hooks

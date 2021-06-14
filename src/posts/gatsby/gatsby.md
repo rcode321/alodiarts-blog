@@ -5,6 +5,8 @@
 
 I just launched my new gatsby website!!!
 
+![Stone](./stone.jpg)
+
 ## Topics Covered
 
 1. Gatsby
