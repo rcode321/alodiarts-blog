@@ -2,19 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 // import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-import Layout from "../components/layout"
-
-// export const query = graphql`
-//   query($slug: String!) {
-//     markdownRemark(fields: { slug: { eq: $slug } }) {
-//       frontmatter {
-//         title
-//         date
-//       }
-//       html
-//     }
-//   }
-// `
+import Layout from "../components/layout/layout"
+import Head from "../components/head"
 
 export const query = graphql`
   query($slug: String!) {
@@ -50,27 +39,27 @@ const Blog = ({ data }) => {
       },
     },
   }
-  // const options = {
-  //   renderNode: {
-  //     "embedded-asset-block": node => {
-  //       return (
-  //         <>
-  //           <img
-  //             src={node.data.target.fixed.src}
-  //             alt={node.data.target.title}
-  //           />
-  //         </>
-  //       )
-  //     },
-  //   },
-  // }
 
   return (
     <Layout>
+      <Head title={data.contentfulBlogPost.title} />
       <h1>{data.contentfulBlogPost.title}</h1>
       <p>{data.contentfulBlogPost.publishDate}</p>
       {renderRichText(data.contentfulBlogPost.body, options)}
     </Layout>
+
+    // export const query = graphql`
+    //   query($slug: String!) {
+    //     markdownRemark(fields: { slug: { eq: $slug } }) {
+    //       frontmatter {
+    //         title
+    //         date
+    //       }
+    //       html
+    //     }
+    //   }
+    // `
+
     // <Layout>
     //   <h1>{data.markdownRemark.frontmatter.title}</h1>
     //   <p>{data.markdownRemark.frontmatter.date}</p>

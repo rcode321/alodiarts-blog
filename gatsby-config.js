@@ -10,10 +10,11 @@ require("dotenv").config({
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Full-Stack Developer!",
+    title: "Alodi Arts",
     author: "Rafael Doza",
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-contentful",
       options: {
