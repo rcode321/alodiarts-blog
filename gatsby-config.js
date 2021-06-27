@@ -14,6 +14,10 @@ module.exports = {
     author: "Rafael Doza",
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-styled-components",
+      options: {},
+    },
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-contentful",

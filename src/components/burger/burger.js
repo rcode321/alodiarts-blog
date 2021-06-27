@@ -1,14 +1,15 @@
 import React from "react"
-import * as burgerStyles from "./burger.module.scss"
 
-const Burger = () => {
+// import * as burgerStyles from "./burger.module.scss"
+import { StyledBurger } from "./burger.styled"
+
+const Burger = ({ open, setOpen }) => {
   return (
-    <label for="check">
-      <input type="checkbox" id="check" />
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
+    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+      <div />
+      <div />
+      <div />
+    </StyledBurger>
   )
 }
 

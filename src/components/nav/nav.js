@@ -1,56 +1,29 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Burger from "../burger/burger"
+import { motion } from "framer-motion"
 
-import * as navStyles from "./nav.module.scss"
+import { Nav } from "./nav.styled"
 
-const Nav = () => {
+const NavBar = ({ open }) => {
   return (
-    <div>
-      <Burger />
-      <nav>
-        <ul className={navStyles.navList}>
-          <li>
-            <Link
-              className={navStyles.navItem}
-              activeClassName={navStyles.activeNavItem}
-              to="/"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={navStyles.navItem}
-              activeClassName={navStyles.activeNavItem}
-              to="/about"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={navStyles.navItem}
-              activeClassName={navStyles.activeNavItem}
-              to="/blog"
-            >
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={navStyles.navItem}
-              activeClassName={navStyles.activeNavItem}
-              to="/contact"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <Nav open={open}>
+      <motion.ul animate={{ x: -270 }} transition={{ duration: 2.3 }}>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/blog">Blog</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+      </motion.ul>
+    </Nav>
   )
 }
 
-export default Nav
+export default NavBar
