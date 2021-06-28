@@ -5,13 +5,12 @@ export const Nav = styled.nav`
   flex-direction: column;
   justify-content: center;
   background: #0d0c1d;
-
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
 
   height: 100vh;
   width: 100%;
   text-align: left;
-  padding: 2rem;
+  /* padding: 2rem; */
   position: absolute;
   top: 0;
   left: 0;
@@ -44,11 +43,12 @@ export const Nav = styled.nav`
     }
 
     &:hover {
+      /* border-bottom: 2px solid; */
       color: #343078;
     }
   }
   ul {
     list-style-type: none;
-    padding: 20rem;
+    padding: 1rem;
   }
 `

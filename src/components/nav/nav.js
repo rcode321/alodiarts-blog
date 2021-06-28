@@ -8,7 +8,11 @@ import { Nav } from "./nav.styled"
 const NavBar = ({ open }) => {
   return (
     <Nav open={open}>
-      <motion.ul animate={{ x: -270 }} transition={{ duration: 2.3 }}>
+      <motion.ul
+        initial={{ x: 90, opacity: 0 }}
+        animate={{ x: 40, opacity: 1 }}
+        transition={{ delay: 0.8, type: "spring", stiffness: 8 }}
+      >
         <li>
           <Link to="/">Home</Link>
         </li>
