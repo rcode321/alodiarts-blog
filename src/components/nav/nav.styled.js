@@ -10,7 +10,7 @@ export const Nav = styled.nav`
   height: 100vh;
   width: 100%;
   text-align: left;
-  /* padding: 2rem; */
+  z-index: 1;
   position: absolute;
   top: 0;
   left: 0;

@@ -8,7 +8,6 @@ import * as headerStyles from "./header.module.scss"
 
 const Header = () => {
   const [open, setOpen] = useState(false)
-  // const node = useRef()
 
   const data = useStaticQuery(graphql`
     query {
